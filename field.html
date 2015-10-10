@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+
+<!--BOT-->
+<div class="row">
+
+    <div class="col-md-offset-3 col-md-6 col-xs-10">
+        
+        <div class="panel panel-default">
+            <div class="panel-heading">{{bot.selection}}</div>
+            <div class="panel-body centr">
+                <i class="{{ bot.class }}"></i>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="col-md-3">
+        <h3><label class="label label-info">{{bot.score}}</label></h3>
+    </div>
+    
+</div>
+
+<!--BOT Ends-->
+
+<div class="row">
+    
+    <div class="col-md-2">
+        <h3><label class="label label-success">Round&nbsp;<span ng-model="currentRound" ng-init="currentRound=0">{{currentRound}}</span></label></h3>
+    </div>
+    
+</div>
+<br>
+
+<!--PLAYER-->
+
+<div class="row">
+
+    <div class="col-md-offset-3 col-md-6 col-xs-10">
+        
+        <div class="panel panel-primary">
+            <div class="panel-heading">{{player.selection}}</div>
+            <div class="panel-body centr">
+                <i class="{{ player.class }}"></i>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="col-md-3">
+        <h3><label class="label label-info">{{player.score}}</label></h3>
+    </div>
+    
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-md-2 col-xs-2"><button class="btn btn-default" ng-click="player.rock();"><i class="fa fa-hand-rock-o fa-2x"></i></button></div>
+    <div class="col-md-2 col-xs-2"><button class="btn btn-default" ng-click="player.paper();"><i class="fa fa-hand-paper-o fa-2x"></i></button></div>
+    <div class="col-md-2 col-xs-2"><button class="btn btn-default" ng-click="player.scissor();"><i class="fa fa-hand-scissors-o fa-2x"></i></button></div>
+    <div class="col-md-2 col-xs-2"><button class="btn btn-default" ng-click="player.lizard();"><i class="fa fa-hand-lizard-o fa-2x"></i></button></div>
+    <div class="col-md-2 col-xs-2"><button class="btn btn-default" ng-click="player.spock();"><i class="fa fa-hand-spock-o fa-2x"></i></button></div>
+</div>

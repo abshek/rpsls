@@ -1,0 +1,12 @@
+{
+  "name": "RPSLS",
+  "version": "0.0.1",
+  "description": "Rock Paper Scissor Lizard Spock",
+  "author": "abshekagr@gmail.com",
+  "dependencies": {
+    "angular": "^1.4.7",
+    "angular-route": "^1.4.7",
+    "express": "^4.13.3",
+    "font-awesome": "^4.4.0"
+  }
+}
