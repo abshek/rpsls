@@ -19,6 +19,10 @@ app.config(function($routeProvider){
     .when('/exit',{
         templateUrl: 'exit.html',
         controller: 'exitCtrl'
+            })
+  
+    .when('/help',{
+        templateUrl: 'help.html'
             });
 });
 
