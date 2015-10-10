@@ -140,7 +140,8 @@ app.controller('fieldCtrl', ['$scope', 'dataFact', '$location', function($scope,
         var bot = $scope.bot.selection;
         var player = $scope.player.selection;
         
-        switch (player){
+        if(player != bot){
+            switch (player){
             case "Rock":
                 if(bot=="Lizard" || bot=="Scissor"){
                     $scope.player.score += 1;
@@ -177,6 +178,10 @@ app.controller('fieldCtrl', ['$scope', 'dataFact', '$location', function($scope,
                 }
                 break;
         }
+        
+        }
+        
+        
     }
     
     //Checking if the number of rounds have been achieved
