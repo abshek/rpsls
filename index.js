@@ -223,7 +223,7 @@ app.controller('exitCtrl', ['$scope', 'dataFact', '$window', function($scope, da
     }
     
     $scope.new_game = function(){
-        $window.location.href = "/";
+        $window.location.href = "/rpsls";
     }
     
     $scope.message = winner();
