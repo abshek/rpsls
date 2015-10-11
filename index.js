@@ -196,7 +196,7 @@ app.controller('fieldCtrl', ['$scope', 'dataFact', '$location', function($scope,
         $scope.currentRound += 1;
         var total_rounds = $scope.rounds_selected;
         
-        if($scope.currentRound > total_rounds-1){
+        if($scope.currentRound == total_rounds){
             scores();
             setTimeout(function(){ window.location.href="#exit"; }, 1500);
         } 
