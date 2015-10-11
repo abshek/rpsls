@@ -189,16 +189,17 @@ app.controller('fieldCtrl', ['$scope', 'dataFact', '$location', function($scope,
     }
     
     //Checking if the number of rounds have been achieved
+    //Automatic redirect if rounds over
+
     
     var round_checker = function(){
         $scope.currentRound += 1;
         var total_rounds = $scope.rounds_selected;
-        var current_round = clicks;
         
-        if(current_round > total_rounds){
+        if($scope.currentRound > total_rounds-1){
             scores();
-            $location.path('/exit');
-        }
+            setTimeout(function(){ window.location.href="#exit"; }, 1500);
+        } 
         
     }
     
