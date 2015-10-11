@@ -221,7 +221,7 @@ app.controller('exitCtrl', ['$scope', 'dataFact', '$window', function($scope, da
             return "You won against the system!";
         } else if(bot>player){
             return "You have Failed this system!";
-        } else {
+        } else if(bot==player){
             return "System and you are buddies!";
         }
         
