@@ -198,40 +198,54 @@ app.controller('fieldCtrl', ['$scope', 'dataFact', '$location', function($scope,
         
         if($scope.currentRound == total_rounds){
             scores();
-            setTimeout(function(){ window.location.href="#exit"; }, 1500);
+            disable_controls();
+            setTimeout(function(){ window.location.href="#exit"; }, 2000);
         } 
+        
+    }
+    
+    //Disable all the controls
+    var disable_controls = function(){
+        document.getElementById("rock").disabled = true;
+        document.getElementById("paper").disabled = true;
+        document.getElementById("scissor").disabled = true;
+        document.getElementById("lizard").disabled = true;
+        document.getElementById("spock").disabled = true;
         
     }
     
     //Scores storage into factory
     var scores = function(){
         dataFact.bot.score = $scope.bot.score;
+        console.log(dataFact.bot.score);
         dataFact.player.score = $scope.player.score;
+        console.log(dataFact.player.score);
     }
     
 }]);
 
 
 app.controller('exitCtrl', ['$scope', 'dataFact', '$window', function($scope, dataFact, $window){
-    var winner = function(){
+       var winner = function(){
+        
         var player = dataFact.player.score;
         var bot = dataFact.bot.score;
         
         if(player>bot){
-            return "You won against the system!";
+            return "You won!";
         } else if(bot>player){
-            return "You have Failed this system!";
-        } else if(bot==player){
-            return "System and you are buddies!";
+            return "You lost!";
+        } else {
+            return "It's a tie."
         }
         
-    }
+    } 
+    
+    $scope.message = winner();
     
     $scope.new_game = function(){
         $window.location.href = "/rpsls";
     }
-    
-    $scope.message = winner();
     
 }]);
 
